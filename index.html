@@ -75,6 +75,9 @@ nav {
   border-bottom: 0.5px solid var(--border-strong);
 }
 
+.scroll-row::-webkit-scrollbar { display: none; }
+.projects-grid::-webkit-scrollbar { display: none; }
+  
 .hero::before {
   content: '';
   position: absolute; inset: 0;
@@ -487,7 +490,7 @@ footer {
   <span class="section-tag">projects</span>
   <h2 class="section-title">Building to understand.</h2>
 
-  <div class="projects-grid">
+  <div class="projects-grid" style="display:flex; flex-direction:row; overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none; background:none; border:0.5px solid var(--border-strong);">
     <div class="project-card">
       <span class="project-status status-complete">complete</span>
       <h3 class="project-title">The black hole information paradox</h3>
@@ -529,8 +532,8 @@ footer {
   <h2 class="section-title">Contributing to real research.</h2>
   <p style="font-size:15px; color:var(--ink-soft); max-width:580px; margin-bottom:2.5rem; line-height:1.85;">140 classifications across 9 Zooniverse projects. Not for any grade. Just because the questions were interesting.</p>
 
-  <div style="display:flex; gap:1rem; overflow-x:auto; padding-bottom:1rem; scrollbar-width:thin; scrollbar-color:var(--accent) var(--paper-warm);">
-
+  <div style="display:flex; gap:1rem; overflow-x:auto; padding-bottom:1rem; scrollbar-width:none; -ms-overflow-style:none;">
+    
     <div style="min-width:210px; background:var(--paper-card); border:0.5px solid var(--border-strong); padding:1.5rem; flex-shrink:0;">
       <div style="font-family:var(--mono); font-size:9px; letter-spacing:0.15em; color:var(--accent); margin-bottom:0.6rem;">27 classifications</div>
       <div style="font-family:var(--serif); font-size:1rem; margin-bottom:0.4rem;">Planet Hunters TESS</div>
